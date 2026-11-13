@@ -323,3 +323,10 @@ SELECT * FROM diagnostico_compatibilidade;
 -- 10. Testar tabela sessao_usuario
 SELECT * FROM sessao_usuario;
 
+
+select
+    a.nome AS nome_aplicativo,
+    u.nome AS nome_usuario
+From aplicativo a
+inner join usuario u on a.fk_usuario = u.id_usuario
+order by a.nome ASC;
